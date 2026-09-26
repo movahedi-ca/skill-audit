@@ -31,8 +31,13 @@ See [examples/audit-report-example.md](examples/audit-report-example.md) for a w
 ## Files
 
 - `skills/skill-audit/SKILL.md` - the audit playbook
+- `skills/skill-audit/scripts/audit.py` - offline static checker (no network, no execution, exit codes for CI)
 - `skills/skill-audit/references/patterns.md` - grep-able dangerous-pattern catalog
 - `examples/audit-report-example.md` - example report format
+
+## What it does not do
+
+This is a pre-install checklist, not a scanner replacement. Static checks catch known-bad patterns; a clean result is not proof of safety, and a determined attacker can evade pattern matching. Use it alongside dedicated scanners, not instead of them.
 
 ## Security posture of this skill
 
